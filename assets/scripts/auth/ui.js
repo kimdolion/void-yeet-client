@@ -80,7 +80,6 @@ const changePasswordSuccess = function () {
   setTimeout(() => {
     $('#message')
       .text('')
-      .css('background-color', 'white')
       .removeClass('success')
   }, 5000)
 }
@@ -92,9 +91,8 @@ const onError = function () {
     .addClass('failure')
   $('form').trigger('reset')
   setTimeout(() => {
-    $('#error-message')
+    $('#message')
       .text('')
-      .css('background-color', 'white')
       .removeClass('failure')
   }, 4000)
 }

@@ -1,0 +1,17 @@
+{{#each thoughts as |thought|}}
+  <!-- {{log book}} -->
+  <section data-id="{{thought.id}}">
+    <h3>
+      {{limit thought.title 15}}
+    </h3>
+    <p>
+      {{#if thought.words}}
+        {{thought.words}}
+      {{else}}
+        No words provided.
+      {{/if}}
+    </p>
+    <button data-id="{{thought.id}}" class="btn btn-outline-danger delete-button">Delete Yeet!</button>
+  </section>
+
+{{/each}}

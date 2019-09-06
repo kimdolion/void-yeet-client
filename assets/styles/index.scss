@@ -5,5 +5,18 @@ body {
   color: silver;
 }
 
-main {
+.failure {
+  background-color: red;
+  border: 2px solid red;
+  color: black;
+  font-size: 3vh;
+  text-align: center;
+}
+
+.success {
+  background-color: green;
+  border: 2px solid green;
+  color: black;
+  font-size: 3vh;
+  text-align: center;
 }

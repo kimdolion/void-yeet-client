@@ -16,6 +16,12 @@ HTML, CSS, JavaScript, Boostrap, AJAX
 Created HTML with user authentication parts.
 Added HTML for CRUD yeet options.
 Went back to the backend to double check and update controllers.
+Changed HTML around to see how well the auth pieces were working based on old project.
+Added a handlebar to create a delete button on each of the thoughts following the index action.
+Began adding many more files/code I knew I would need with the help of past lessons.
+Updated files to the urls and proper data table.
+
+
 
 ## Problem Solving
 
