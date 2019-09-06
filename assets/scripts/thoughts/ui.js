@@ -8,7 +8,7 @@ const onIndexSuccess = (responseData) => {
   $('.content').html(showThoughtsHtml)
 }
 
-const onGetGamesSuccess = responseData => {
+const onGetThoughtsSuccess = responseData => {
   if (responseData.thoughts.length > 0) {
     const lengthYeets = responseData.thoughts.length
     $('#yeets-length')
@@ -57,7 +57,7 @@ const onError = function () {
 
 module.exports = {
   onIndexSuccess,
-  onGetGamesSuccess,
+  onGetThoughtsSuccess,
   onShowSuccess,
   onUpdateSuccess,
   onCreateSuccess,

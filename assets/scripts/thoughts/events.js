@@ -6,6 +6,7 @@ const ui = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
 const onGetThoughts = function () {
+  event.preventDefault()
   const data = getFormFields(event.target)
   api.indexThoughts(data.thought)
     .then(ui.onIndexSuccess)
@@ -49,15 +50,15 @@ const onDeleteThought = (event) => {
 const onCreateThought = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.createThought(data.thought)
+  api.createThought(data)
     .then(ui.onCreateSuccess)
     .catch(ui.onError)
 }
 
 const addHandlers = () => {
-  $('thoughts-index').on('submit', onGetThoughts)
-  $('thought-show').on('submit', onShowThought)
-  $('thought-update').on('submit', onUpdateThought)
+  $('index-thoughts').on('submit', onGetThoughts)
+  $('show-thought').on('submit', onShowThought)
+  $('update-thought').on('submit', onUpdateThought)
   $('#create-thought').on('submit', onCreateThought)
   $('.content').on('click', '.delete-button', onDeleteThought)
   // $('#thoughts-collection').on('click', onGetThoughtsLength)
