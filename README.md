@@ -13,10 +13,15 @@
 HTML, CSS, JavaScript, Boostrap, AJAX
 
 ## Development Process
+Created HTML with user authentication parts.
+Added HTML for CRUD yeet options.
+Went back to the backend to double check and update controllers.
 
 ## Problem Solving
 
+
 ## Unsolved Problems
+
 
 ## Wireframes and User Stories
 [Wireframes](https://docs.google.com/document/d/1KwBhRLp_6zkn_2rRmb9peL4R21ZophPq4RHJ0sfLhYY/edit?usp=sharing)
