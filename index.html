@@ -1,17 +1,90 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Void Yeet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>Yeet into the Void</h1>
+  <header>
+  </header>
+  <!-- TODO hide the following until logged in -->
+  <main>
+    <div id="message"></div>
+    <div id="hideOnceSignIn">
+      <form id="sign-up" class="border">
+        <fieldset>
+          <legend>Sign Up</legend>
+          <input type="text" name="credentials[email]" placeholder="Email@email.com">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" class="btn btn-outline-primary" value="Sign Up">
+        </fieldset>
+      </form>
+      <form id="sign-in" class="border">
+        <fieldset>
+          <legend>Sign In</legend>
+          <input type="text" name="credentials[email]" placeholder="Email@email.com">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" class="btn btn-outline-primary" value="Sign In">
+        </fieldset>
+      </form>
+    </div>
+    <div id="hide">
+      <section>
+        <form id="change-password" class="border">
+          <fieldset>
+            <legend>Change Password</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" class="btn btn-outline-secondary" value="Change Password">
+          </fieldset>
+        </form>
+        <form id="sign-out" class="border">
+          <fieldset>
+            <legend>Sign Out</legend>
+            <input type="submit" class="btn btn-outline-dark" value="Sign Out">
+          </fieldset>
+        </form>
+      </section>
+      <br>
+      <p id="message"></p>
+
+      <button id="index-books">Get All Books</button>
+
+      <form id="show-book">
+        <h4>Show One Book:</h4>
+        <input type="number" placeholder="Enter Book ID Here" name="book[id]" min="0" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <form id="delete-book">
+        <h4>Delete One Book:</h4>
+        <input type="number" placeholder="Enter Book ID Here" name="book[id]" min="0" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <form id="create-book">
+        <h4>Create One Book:</h4>
+        <input type="text" placeholder="Enter Book Title Here" name="book[title]" required>
+        <input type="text" placeholder="Enter Book Author Here" name="book[author]" required>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="books-display"></div>
+    </div>
+  </main>
+  <footer>
+    <p>Made by Kimdolion | | Github</p>
+  </footer>
+</body>
+
 </html>
