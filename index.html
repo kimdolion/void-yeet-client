@@ -22,20 +22,19 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav">
-        <a href="#" class="nav-item nav-link">The Void's Collection</a>
+        <button id="index-thoughts" class="nav-item">Look into the Void</button>
       </div>
       <div class="navbar-nav ml-auto">
-        <form id="sign-up" class="form-inline">
-            <input type="text" name="credentials[email]" placeholder="Email@email.com">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <div class="nav navbar-nav navbar-right">
+          <!-- <form id="change-password" class="form-inline .col-auto">
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" class="btn-sm btn-warning" value="Change Password">
           </form>
-          <form id="sign-in" class="form-inline">
-            <input type="submit" class="btn-sm btn-primary" value="Sign Up">
-            <input type="text" name="credentials[email]" placeholder="Email@email.com">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" class="btn-sm btn-primary" value="Sign In">
-        </form>
+          <form id="sign-out" class="form-inline .col-auto">
+            <input type="submit" class="btn-sm btn-danger" value="Sign Out">
+          </form>-->
+        </div>
       </div>
     </div>
   </nav>
@@ -52,10 +51,14 @@
       filled, seeking passed?
     </p>
     <p>
-      Space probably upper-air gather condition reddish wireless specimens about. Starkweather-Moore indeed level hours objects which alien, sherman strange? Sherman transportation fatter thing would powers, which conception specimens? Developing spare geologist anything about dissolved, horrors earthly wooden! Extended achieved aerial attempted conscious, direct graves immense after! Which subtle moderate aeroplane about camera incised could reproduced. Larsen realized hence queer growth oppressive passes lightened sensitiveness.
+      Space probably upper-air gather condition reddish wireless specimens about. Starkweather-Moore indeed level hours objects which alien, sherman strange? Sherman transportation fatter thing would powers, which conception specimens? Developing
+      spare geologist anything about dissolved, horrors earthly wooden! Extended achieved aerial attempted conscious, direct graves immense after! Which subtle moderate aeroplane about camera incised could reproduced. Larsen realized hence queer
+      growth oppressive passes lightened sensitiveness.
     </p>
     <p>
-      Human various first douglas paleogean observed deductions cache climatic. Another present about passes smoothed winds plane might shuddered. Those mankind paper missing tissues human driven mountain babbled. Lethal hands blocks forbidden deepened feelings world hands merely. Unsatisfying assumed tent-cloth world answering oddly showed, cubes thallus? Poetry present mctighe awake flight fourteen, mystery placed first? Waste consent sight could groups rather, throughout there finds!
+      Human various first douglas paleogean observed deductions cache climatic. Another present about passes smoothed winds plane might shuddered. Those mankind paper missing tissues human driven mountain babbled. Lethal hands blocks forbidden
+      deepened feelings world hands merely. Unsatisfying assumed tent-cloth world answering oddly showed, cubes thallus? Poetry present mctighe awake flight fourteen, mystery placed first? Waste consent sight could groups rather, throughout there
+      finds!
     </p>
     <div id="message"></div>
     <div id="hideOnceSignIn">
@@ -76,7 +79,7 @@
           <input type="submit" class="btn btn-outline-primary" value="Sign In">
         </fieldset>
       </form>
-    </div>
+    </div> -->
     <div id="hide">
       <section>
         <form id="change-password" class="border">
@@ -95,29 +98,28 @@
         </form>
       </section>
       <br>
-      <p id="book-message"></p>
+      <p id="thought-message"></p>
 
-      <button id="index-books">Get All Books</button>
 
-      <form id="show-book">
-        <h4>Show One Book:</h4>
-        <input type="number" placeholder="Enter Book ID Here" name="book[id]" min="0" required>
+
+      <form id="show-thought">
+        <h4>Show One thought:</h4>
+        <input type="number" placeholder="Enter thought ID Here" name="thought[id]" min="0" required>
         <button type="submit">Submit</button>
       </form>
 
-      <form id="delete-book">
-        <h4>Delete One Book:</h4>
-        <input type="number" placeholder="Enter Book ID Here" name="book[id]" min="0" required>
+      <form id="delete-thought">
+        <h4>Delete One thought:</h4>
+        <input type="number" placeholder="Enter thought ID Here" name="thought[id]" min="0" required>
         <button type="submit">Submit</button>
       </form>
 
-      <form id="create-book">
-        <h4>Create One Book:</h4>
-        <input type="text" placeholder="Enter Book Title Here" name="book[title]" required>
-        <input type="text" placeholder="Enter Book Author Here" name="book[author]" required>
+      <form id="create-thought">
+        <h4>Create One thought:</h4>
+        <input type="text" placeholder="Submit thoughts" name="thought[title]" required>
         <button type="submit">Submit</button>
       </form>
-      <div id="books-display"></div>
+      <div id="thoughts-display"></div>
     </div>
   </main>
   <footer>
