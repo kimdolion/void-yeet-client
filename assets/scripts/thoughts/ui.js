@@ -1,24 +1,29 @@
 'use strict'
 
 const store = require('../store')
-const showThoughtsTemplate = require('../templates/yeet-listing.handlebars')
+// const showThoughtsTemplate = require('../templates/yeet-listing.handlebars')
 
 const onIndexSuccess = (responseData) => {
-  const showThoughtsHtml = showThoughtsTemplate({ thoughts: responseData.thoughts })
-  $('.content').html(showThoughtsHtml)
+  const thoughts = responseData.thoughts
+  thoughts.forEach(thought => {
+    $('#message').append(`<p>${thought.id}: ${thought.words}</p>`)
+  })
 }
+//   const showThoughtsHtml = showThoughtsTemplate({ thoughts: responseData.thoughts })
+//   $('.content').html(showThoughtsHtml)
+// }
 
-const onGetThoughtsSuccess = responseData => {
-  if (responseData.thoughts.length > 0) {
-    const lengthYeets = responseData.thoughts.length
-    $('#yeets-length')
-      .text(`You've Yeeted ${lengthYeets} Thoughts!`)
-    setTimeout(() => {
-      $('#yeets-length')
-        .text('')
-    }, 5000)
-  }
-}
+// const onGetThoughtsSuccess = responseData => {
+//   if (responseData.thoughts.length > 0) {
+//     const lengthYeets = responseData.thoughts.length
+//     $('#yeets-length')
+//       .text(`You've Yeeted ${lengthYeets} Thoughts!`)
+//     setTimeout(() => {
+//       $('#yeets-length')
+//         .text('')
+//     }, 5000)
+//   }
+// }
 
 const onShowSuccess = function (responseData) {
   const thoughtHTML = (`
@@ -57,7 +62,7 @@ const onError = function () {
 
 module.exports = {
   onIndexSuccess,
-  onGetThoughtsSuccess,
+  // onGetThoughtsSuccess,
   onShowSuccess,
   onUpdateSuccess,
   onCreateSuccess,

@@ -13,7 +13,7 @@ const signUpSuccess = function (data) {
       .text('')
       .css('background-color', 'white')
       .removeClass('success')
-  }, 5000)
+  }, 4000)
 }
 
 const signInSuccess = function (data) {
@@ -27,7 +27,7 @@ const signInSuccess = function (data) {
       .text('')
       .css('background-color', 'white')
       .removeClass('success')
-  }, 5000)
+  }, 4000)
   store.user = data.user
   $('#hideOnceSignIn').css('display', 'none')
   $('#hide')
@@ -55,7 +55,7 @@ const signOutSuccess = function () {
       .text('')
       .css('background-color', 'white')
       .removeClass('success')
-  }, 5000)
+  }, 4000)
 }
 
 const signOutFailure = function () {
@@ -77,7 +77,7 @@ const changePasswordSuccess = function () {
     $('#message')
       .text('')
       .removeClass('success')
-  }, 5000)
+  }, 4000)
 }
 
 const onError = function () {

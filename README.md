@@ -25,7 +25,7 @@ Updated files to the urls and proper data table.
 
 ## Problem Solving
 Create
-  When I created 
+  When I created a thought to send to the api, the api was logging the words as null. Console log registered them under title. I hadn't realized how the HTML was interacting with everything else and started searching through my API and my front-end JS files to figure out where title was coming from. Turns out I setup my form for create incorrectly. Console log is my best friend. Probably could have solved that problem faster using find but I wanted to make sure I understood the pathways of where the information was coming from. Also legitimately forgot that the HTML was as important to the muscles that is JS.
 
 ## Unsolved Problems
 

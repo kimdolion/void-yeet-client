@@ -7,10 +7,20 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.onError)
+
+  const signInUp = () => {
+    api.signIn(data)
+      .then(ui.signInSuccess)
+      .catch(ui.failure)
+  }
+  api.signUp(data)
+    .then(ui.signUpSuccess)
+    .then(setTimeout(signInUp, 1000))
+    .catch(ui.failure)
 }
 
 const onSignIn = function (event) {
