@@ -9,10 +9,10 @@ const createThought = function (data) {
   return $.ajax({
     url: config.apiUrl + '/thoughts',
     method: 'POST',
+    data,
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 

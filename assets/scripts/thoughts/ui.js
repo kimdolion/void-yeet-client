@@ -21,10 +21,10 @@ const onGetThoughtsSuccess = responseData => {
 }
 
 const onShowSuccess = function (responseData) {
-  const gameHTML = (`
+  const thoughtHTML = (`
     <h4>ID: ${responseData.thought.id}</h4>
   `)
-  $('#game-display').html(gameHTML)
+  $('#game-display').html(thoughtHTML)
   $('form').trigger('reset')
 }
 

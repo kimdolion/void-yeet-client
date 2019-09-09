@@ -3,7 +3,6 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  console.log('sign up success')
   $('#message')
     .text('Signed up successfully')
     .removeClass()
@@ -36,7 +35,6 @@ const signInSuccess = function (data) {
 }
 
 const signOutSuccess = function () {
-  console.log('signout success')
   $('#message')
     .text('Signed out successfully')
     .removeClass()
@@ -61,7 +59,6 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
-  console.log('signout fail')
   $('#message')
     .text('Error on sign out')
     .removeClass()
@@ -69,7 +66,6 @@ const signOutFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-  console.log('pw success')
   $('.hide').css('display', 'block')
   $('#message')
     .text('Changed password successfully')
