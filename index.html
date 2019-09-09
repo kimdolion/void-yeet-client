@@ -59,6 +59,7 @@
   </nav>
   <!-- TODO hide the following until logged in -->
   <main>
+    <div id="message"></div>
     <p id="thought-message"></p>
     <div id="content" class="content"></div>
     <!-- <p>
@@ -128,28 +129,21 @@
         </form>
       </section> -->
       <form id="index-thoughts">
-        <input type="submit" value="Get All Thoughts" />
+        <input type="submit" value="Get All Thoughts" class="btn btn-outline-info"/>
       </form>
+      <button id="clearThoughtsButton" class="btn btn-outline-warning">Clear Thoughts!</button>
       <form id="show-thought">
         <h4>Show One thought:</h4>
         <input type="number" placeholder="Enter thought ID Here" name="thought[id]" min="0" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-outline-light">Submit</button>
       </form>
-
-      <!-- <form id="delete-thought">
-        <h4>Delete One thought:</h4>
-        <input type="number" placeholder="Enter thought ID Here" name="thought[id]" min="0" required>
-        <button type="submit">Submit</button>
-      </form> -->
-
       <form id="create-thought">
         <h4>Create One thought:</h4>
         <input type="text" placeholder="A thought to yeet?" name="thought[words]" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-outline-light">Submit</button>
       </form>
       <div id="thoughts-display"></div>
     </div>
-    <div id="message"></div>
   </main>
   <footer>
     <p>Made by Kimdolion | | Github | | Credits </p>

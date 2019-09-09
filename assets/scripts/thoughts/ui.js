@@ -1,17 +1,17 @@
 'use strict'
 
 const store = require('../store')
-// const showThoughtsTemplate = require('../templates/yeet-listing.handlebars')
+const showThoughtsTemplate = require('../templates/yeet-listing.handlebars')
 
 const onIndexSuccess = (responseData) => {
-  const thoughts = responseData.thoughts
-  thoughts.forEach(thought => {
-    $('#message').append(`<p>${thought.id}: ${thought.words}</p>`)
-  })
-}
-//   const showThoughtsHtml = showThoughtsTemplate({ thoughts: responseData.thoughts })
-//   $('.content').html(showThoughtsHtml)
+//   const thoughts = responseData.thoughts
+//   thoughts.forEach(thought => {
+//     $('#message').append(`<p>${thought.id}: ${thought.words}</p>`)
+//   })
 // }
+  const showThoughtsHtml = showThoughtsTemplate({ thoughts: responseData.thoughts })
+  $('.content').html(showThoughtsHtml)
+}
 
 // const onGetThoughtsSuccess = responseData => {
 //   if (responseData.thoughts.length > 0) {
@@ -29,8 +29,12 @@ const onShowSuccess = function (responseData) {
   const thoughtHTML = (`
     <h4>ID: ${responseData.thought.id}</h4>
   `)
-  $('#game-display').html(thoughtHTML)
+  $('#thought-display').html(thoughtHTML)
   $('form').trigger('reset')
+}
+
+const onClearThoughts = () => {
+  $('.content').empty()
 }
 
 const onUpdateSuccess = function (responseData) {
@@ -64,6 +68,7 @@ module.exports = {
   onIndexSuccess,
   // onGetThoughtsSuccess,
   onShowSuccess,
+  onClearThoughts,
   onUpdateSuccess,
   onCreateSuccess,
   onError

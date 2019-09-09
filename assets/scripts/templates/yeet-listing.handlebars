@@ -1,12 +1,9 @@
 {{#each thoughts as |thought|}}
-  <!-- {{log book}} -->
   <section data-id="{{thought.id}}">
-    <h3>
-      {{limit thought.title 15}}
-    </h3>
+    <h4>Yeet ID: {{thought.id}}</h4>
     <p>
       {{#if thought.words}}
-        {{thought.words}}
+        You yeeted: {{thought.words}}
       {{else}}
         No words provided.
       {{/if}}

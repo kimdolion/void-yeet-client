@@ -28,6 +28,11 @@ const onShowThought = function (event) {
     .catch(ui.onError)
 }
 
+const onClearThoughts = (event) => {
+  event.preventDefault()
+  ui.onClearThoughts()
+}
+
 const onUpdateThought = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -38,9 +43,8 @@ const onUpdateThought = function (event) {
 
 const onDeleteThought = (event) => {
   const id = $(event.target).data('id')
-  api.deleteThought(id)
+  api.destroyThought(id)
     // .then(onGetBooks(event)) this is bad. don't do this. it will run immediately, it will refresh the page before we actually delete the book.
-    // the annonymous function isn't actually being invoked. by passing the reference
     .then(function () {
       onGetThoughts(event)
     })
@@ -58,6 +62,7 @@ const onCreateThought = function (event) {
 const addHandlers = () => {
   $('#index-thoughts').on('submit', onGetThoughts)
   $('#show-thought').on('submit', onShowThought)
+  $('#clearThoughtsButton').on('click', onClearThoughts)
   $('#update-thought').on('submit', onUpdateThought)
   $('#create-thought').on('submit', onCreateThought)
   $('.content').on('click', '.delete-button', onDeleteThought)
