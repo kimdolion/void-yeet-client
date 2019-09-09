@@ -9,10 +9,11 @@
         No words provided.
       {{/if}}
     </p>
-    <!-- <form>
-      <input type="text" name="thought[words]" placeholder="Enter your thoughts..."  />
-      <button data-id="{{thought.id}}" class="btn btn-outline-info update-button">Update</button>
-    </form> -->
+    <form id="update-thought">
+      <h4>Update One Thought:</h4>
+      <input type="text" placeholder="A thought to fix" name="thought[words]" required>
+      <button type="submit" class="btn btn-outline-light">Submit</button>
+    </form>
     <button data-id="{{thought.id}}" class="btn btn-outline-danger delete-button">Delete Yeet!</button>
   </section>
 

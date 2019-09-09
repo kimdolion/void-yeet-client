@@ -26,12 +26,8 @@ const onIndexSuccess = (responseData) => {
 // }
 
 const onShowSuccess = function (responseData) {
-  const thoughtHTML = (`
-    <h4>ID: ${responseData.thought.id}</h4>
-    <p>Thought: ${responseData.thought.words}</p>
-  `)
-  $('#thoughts-display').html(thoughtHTML)
-  $('form').trigger('reset')
+  console.log('show success', responseData)
+  $('#thought-display').text('Showing past yeet: ' + responseData.thought.words)
 }
 
 const onClearThoughts = () => {
@@ -40,7 +36,7 @@ const onClearThoughts = () => {
 
 const onUpdateSuccess = function (responseData) {
   console.log('update success', responseData)
-  const text = responseData.thought.words
+  const text = responseData.thought.text
   $('#message').text('Updating thought: ' + text)
 }
 

@@ -131,24 +131,21 @@
       <form id="index-thoughts">
         <input type="submit" value="Get All Thoughts" class="btn btn-outline-info"/>
       </form>
+
       <button id="clearThoughtsButton" class="btn btn-outline-warning">Clear Thoughts!</button>
+
       <form id="show-thought">
         <h4>Show One Thought:</h4>
         <input type="number" placeholder="Enter thought ID Here" name="thought[id]" min="0" required>
         <button type="submit" class="btn btn-outline-light">Submit</button>
       </form>
-      <form id="update-thought">
-        <h4>Update One Thought:</h4>
-        <input type="number" placeholder="Thought ID" name="thought[id]" min="0" required>
-        <input type="text" placeholder="A thought to fix" name="thought[words]" required>
-        <button type="submit" class="btn btn-outline-light">Submit</button>
-      </form>
+      <div id="thought-display"></div>
+
       <form id="create-thought">
         <h4>Create One Thought:</h4>
         <input type="text" placeholder="A thought to yeet?" name="thought[words]" required>
         <button type="submit" class="btn btn-outline-light">Submit</button>
       </form>
-      <div id="thoughts-display"></div>
     </div>
   </main>
   <footer>

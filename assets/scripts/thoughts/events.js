@@ -5,27 +5,30 @@ const ui = require('./ui.js')
 // const store = require('../store')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
-const onGetThoughts = function (event) {
+const onGetThoughts = event => {
   event.preventDefault()
   api.indexThoughts()
     .then(ui.onIndexSuccess)
     .catch(ui.onError)
 }
 
-const onShowThought = function (event) {
+const onShowThought = event => {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.showThought(data.thought.id)
+
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.showThought(formData)
     .then(ui.onShowSuccess)
     .catch(ui.onError)
 }
 
-const onClearThoughts = (event) => {
+const onClearThoughts = event => {
   event.preventDefault()
   ui.onClearThoughts()
 }
 
-const onUpdateThought = function (event) {
+const onUpdateThought = event => {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
@@ -34,7 +37,7 @@ const onUpdateThought = function (event) {
     .catch(ui.onError)
 }
 
-const onDeleteThought = (event) => {
+const onDeleteThought = event => {
   const id = $(event.target).data('id')
   api.destroyThought(id)
     // .then(onGetBooks(event)) this is bad. don't do this. it will run immediately, it will refresh the page before we actually delete the book.
@@ -44,7 +47,7 @@ const onDeleteThought = (event) => {
     .catch(ui.onError)
 }
 
-const onCreateThought = function (event) {
+const onCreateThought = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.createThought(data)

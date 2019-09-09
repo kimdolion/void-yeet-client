@@ -26,11 +26,14 @@ const indexThoughts = function () {
   })
 }
 
-const showThought = function (data) {
-  const id = data.thought.id
+const showThought = (formData) => {
+  console.log('from api show')
+  console.log('data is ', formData)
+  const id = formData.thought.id
+
   return $.ajax({
     url: config.apiUrl + '/thoughts/' + id,
-    method: 'GET',
+    method: 'GET', // A little redundant, it would be implied
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
@@ -47,15 +50,12 @@ const destroyThought = function (id) {
   })
 }
 
-const updateThought = function (data) {
+const updateThought = function (id) {
   console.log('from api update')
-  console.log('store is', store)
-  const id = data.thoughts.id
-
   return $.ajax({
     url: config.apiUrl + '/thoughts/' + id, // Add id
     method: 'PATCH', // Change to PATCH
-    data: data,
+    data: '',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
