@@ -5,7 +5,6 @@ const config = require('../config')
 const store = require('../store')
 
 const createThought = function (data) {
-  console.log('data: ', data)
   return $.ajax({
     url: config.apiUrl + '/thoughts',
     method: 'POST',
@@ -27,8 +26,6 @@ const indexThoughts = function () {
 }
 
 const showThought = (formData) => {
-  console.log('from api show')
-  console.log('data is ', formData)
   const id = formData.thought.id
 
   return $.ajax({
@@ -51,7 +48,6 @@ const destroyThought = function (id) {
 }
 
 const updateThought = function (formData, id) {
-  console.log('from api update', formData, id)
   return $.ajax({
     url: config.apiUrl + '/thoughts/' + id,
     method: 'PATCH',

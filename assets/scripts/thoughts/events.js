@@ -30,10 +30,8 @@ const onClearThoughts = event => {
 
 const onUpdateThought = event => {
   event.preventDefault()
-  console.log('clicked update', event)
   const id = $(event.target).data('id')
   const formData = getFormFields(event.target)
-  console.log('events update', formData)
   api.updateThought(formData, id)
     .then(function () {
       onGetThoughts(event)

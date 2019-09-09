@@ -11,7 +11,6 @@ const signUpSuccess = function (data) {
   setTimeout(() => {
     $('#message')
       .text('')
-      .css('background-color', 'white')
       .removeClass('success')
   }, 4000)
 }
@@ -22,15 +21,15 @@ const signInSuccess = function (data) {
     .text('Signed in successfully')
     .removeClass()
     .addClass('success')
+  $('form').trigger('reset')
   setTimeout(() => {
     $('#message')
       .text('')
-      .css('background-color', 'white')
       .removeClass('success')
   }, 4000)
   store.user = data.user
-  $('#hideOnceSignIn').css('display', 'none')
-  $('#hide')
+  $('.login').css('display', 'none')
+  $('.logout')
     .css('display', 'block')
 }
 
@@ -41,9 +40,8 @@ const signOutSuccess = function () {
     .addClass('success')
   $('form').trigger('reset')
   store.user = null
-  $('#hide').css('display', 'none')
-  $('#hideUntilNewGame').css('display', 'none')
-  $('#hideOnceSignIn').css('display', 'block')
+  $('.logout').css('display', 'none')
+  $('.login').css('display', 'block')
   $('.box')
     .html('')
     .css('background-color', 'white')
