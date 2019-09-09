@@ -13,13 +13,6 @@ const onGetThoughts = function () {
     .catch(ui.onError)
 }
 
-// const onGetThoughtsLength = function () {
-//   const data = getFormFields(event.target)
-//   api.indexThoughts(data.thought)
-//     .then(ui.onGetThoughtsSuccess)
-//     .catch(ui.onError)
-// }
-
 const onShowThought = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
