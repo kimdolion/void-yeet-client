@@ -1,5 +1,5 @@
 {{#each thoughts as |thought|}}
-  <section data-id="{{thought.id}}">
+  <section data-id="{{thought.id}}" class="border">
     <h5>Yeet ID: {{thought.id}}</h5>
     <h5>You yeeted: </h5>
     <p>
@@ -9,12 +9,12 @@
         No words provided.
       {{/if}}
     </p>
-    <form id="update-thought">
-      <h4>Update One Thought:</h4>
+    <form id="update-thought" data-id="{{thought.id}}">
+      <h6>Update Dis Thought:</h6>
       <input type="text" placeholder="A thought to fix" name="thought[words]" required>
-      <button type="submit" class="btn btn-outline-light">Submit</button>
+      <button class="btn btn-sm btn-outline-light update-button">Update</button>
     </form>
-    <button data-id="{{thought.id}}" class="btn btn-outline-danger delete-button">Delete Yeet!</button>
+    <button data-id="{{thought.id}}" class="btn btn-sm btn-outline-danger delete-button">Delete Yeet!</button>
   </section>
-
+  <br>
 {{/each}}

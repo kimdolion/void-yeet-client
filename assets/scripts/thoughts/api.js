@@ -50,12 +50,12 @@ const destroyThought = function (id) {
   })
 }
 
-const updateThought = function (id) {
-  console.log('from api update')
+const updateThought = function (formData, id) {
+  console.log('from api update', formData, id)
   return $.ajax({
-    url: config.apiUrl + '/thoughts/' + id, // Add id
-    method: 'PATCH', // Change to PATCH
-    data: '',
+    url: config.apiUrl + '/thoughts/' + id,
+    method: 'PATCH',
+    data: formData,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }

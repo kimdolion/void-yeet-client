@@ -30,10 +30,14 @@ const onClearThoughts = event => {
 
 const onUpdateThought = event => {
   event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-  api.updateThought(data)
-    .then(ui.onUpdateSuccess)
+  console.log('clicked update', event)
+  const id = $(event.target).data('id')
+  const formData = getFormFields(event.target)
+  console.log('events update', formData)
+  api.updateThought(formData, id)
+    .then(function () {
+      onGetThoughts(event)
+    })
     .catch(ui.onError)
 }
 
@@ -60,7 +64,7 @@ const addHandlers = () => {
   $('#show-thought').on('submit', onShowThought)
   $('#clearThoughtsButton').on('click', onClearThoughts)
   $('#create-thought').on('submit', onCreateThought)
-  $('#update-thought').on('submit', onUpdateThought)
+  $('.content').on('submit', '#update-thought', onUpdateThought)
   $('.content').on('click', '.delete-button', onDeleteThought)
   // $('#thoughts-collection').on('click', onGetThoughtsLength)
 }

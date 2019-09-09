@@ -26,7 +26,6 @@ const onIndexSuccess = (responseData) => {
 // }
 
 const onShowSuccess = function (responseData) {
-  console.log('show success', responseData)
   $('#thought-display').text('Showing past yeet: ' + responseData.thought.words)
 }
 
@@ -36,7 +35,7 @@ const onClearThoughts = () => {
 
 const onUpdateSuccess = function (responseData) {
   console.log('update success', responseData)
-  const text = responseData.thought.text
+  const text = responseData.thought.words
   $('#message').text('Updating thought: ' + text)
 }
 
