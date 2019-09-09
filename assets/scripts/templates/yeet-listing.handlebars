@@ -1,13 +1,18 @@
 {{#each thoughts as |thought|}}
   <section data-id="{{thought.id}}">
-    <h4>Yeet ID: {{thought.id}}</h4>
+    <h5>Yeet ID: {{thought.id}}</h5>
+    <h5>You yeeted: </h5>
     <p>
       {{#if thought.words}}
-        You yeeted: {{thought.words}}
+        {{thought.words}}
       {{else}}
         No words provided.
       {{/if}}
     </p>
+    <!-- <form>
+      <input type="text" name="thought[words]" placeholder="Enter your thoughts..."  />
+      <button data-id="{{thought.id}}" class="btn btn-outline-info update-button">Update</button>
+    </form> -->
     <button data-id="{{thought.id}}" class="btn btn-outline-danger delete-button">Delete Yeet!</button>
   </section>
 

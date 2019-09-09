@@ -26,9 +26,10 @@ const indexThoughts = function () {
   })
 }
 
-const showThought = function (thought) {
+const showThought = function (data) {
+  const id = data.thought.id
   return $.ajax({
-    url: config.apiUrl + '/thoughts/' + thought.id,
+    url: config.apiUrl + '/thoughts/' + id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -47,13 +48,17 @@ const destroyThought = function (id) {
 }
 
 const updateThought = function (data) {
+  console.log('from api update')
+  console.log('store is', store)
+  const id = data.thoughts.id
+
   return $.ajax({
-    url: config.apiUrl + '/thoughts/' + data.thought.id,
-    method: 'PATCH',
+    url: config.apiUrl + '/thoughts/' + id, // Add id
+    method: 'PATCH', // Change to PATCH
+    data: data,
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 

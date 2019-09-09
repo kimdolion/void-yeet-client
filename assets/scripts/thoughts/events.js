@@ -5,10 +5,9 @@ const ui = require('./ui.js')
 // const store = require('../store')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
-const onGetThoughts = function () {
+const onGetThoughts = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.indexThoughts(data.thought)
+  api.indexThoughts()
     .then(ui.onIndexSuccess)
     .catch(ui.onError)
 }
@@ -16,7 +15,7 @@ const onGetThoughts = function () {
 const onShowThought = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.showGame(data.thought.id)
+  api.showThought(data.thought.id)
     .then(ui.onShowSuccess)
     .catch(ui.onError)
 }
@@ -28,8 +27,9 @@ const onClearThoughts = (event) => {
 
 const onUpdateThought = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.updateGame(data.thought.id)
+  const form = event.target
+  const data = getFormFields(form)
+  api.updateThought(data)
     .then(ui.onUpdateSuccess)
     .catch(ui.onError)
 }
@@ -41,7 +41,7 @@ const onDeleteThought = (event) => {
     .then(function () {
       onGetThoughts(event)
     })
-    .catch(ui.failure)
+    .catch(ui.onError)
 }
 
 const onCreateThought = function (event) {
@@ -56,8 +56,8 @@ const addHandlers = () => {
   $('#index-thoughts').on('submit', onGetThoughts)
   $('#show-thought').on('submit', onShowThought)
   $('#clearThoughtsButton').on('click', onClearThoughts)
-  $('#update-thought').on('submit', onUpdateThought)
   $('#create-thought').on('submit', onCreateThought)
+  $('#update-thought').on('submit', onUpdateThought)
   $('.content').on('click', '.delete-button', onDeleteThought)
   // $('#thoughts-collection').on('click', onGetThoughtsLength)
 }

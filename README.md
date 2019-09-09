@@ -4,7 +4,7 @@
     This is an app you can use to catalog and throw away negative thoughts/feelings in a more fun way.
     To be more specific, to yeet the bad thoughts into the darkness, where they can live away from you, or be permanently deleted.
 
-[Void-Yeet Github Pages Client]()
+[Void-Yeet Github Pages Client](https://kimdolion.github.io/void-yeet-client/)
 [Void-Yeet Heroku API](https://void-yeet.herokuapp.com)
 [Void-Yeet Backend Repo](https://github.com/kimdolion/void-yeet-backend)
 [Void-Yeet Frontend Repo](https://github.com/kimdolion/void-yeet-client)
@@ -20,8 +20,8 @@ Changed HTML around to see how well the auth pieces were working based on old pr
 Added a handlebar to create a delete button on each of the thoughts following the index action.
 Began adding many more files/code I knew I would need with the help of past lessons.
 Updated files to the urls and proper data table.
-
-
+Started trying to figure out a cleaner sign-in/sign-up system. Flucutated back and forth between just relying on what I did and spending time to dig into Bootstrap.
+Updated backend some more once I realized that the Create action was logging the entries as title with null.
 
 ## Problem Solving
 Create

@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('../store')
+// const store = require('../store')
 const showThoughtsTemplate = require('../templates/yeet-listing.handlebars')
 
 const onIndexSuccess = (responseData) => {
@@ -28,8 +28,9 @@ const onIndexSuccess = (responseData) => {
 const onShowSuccess = function (responseData) {
   const thoughtHTML = (`
     <h4>ID: ${responseData.thought.id}</h4>
+    <p>Thought: ${responseData.thought.words}</p>
   `)
-  $('#thought-display').html(thoughtHTML)
+  $('#thoughts-display').html(thoughtHTML)
   $('form').trigger('reset')
 }
 
@@ -38,18 +39,14 @@ const onClearThoughts = () => {
 }
 
 const onUpdateSuccess = function (responseData) {
-  store.thought = responseData.thought
+  console.log('update success', responseData)
+  const text = responseData.thought.words
+  $('#message').text('Updating thought: ' + text)
 }
 
 const onCreateSuccess = function (responseData) {
   $('#hideUntilNewGame')
     .css('display', 'block')
-  $('.box')
-    .css('background-color', 'white')
-    .text('')
-  $('#gameboard-message')
-    .css('background-color', 'white')
-    .text('')
 }
 
 const onError = function () {
