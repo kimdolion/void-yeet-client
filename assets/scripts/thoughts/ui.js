@@ -40,7 +40,14 @@ const onUpdateSuccess = () => {
 }
 
 const onCreateSuccess = function (responseData) {
+  $('#yeet-display')
+    .html('Preparing to yeet: ' + responseData.thought.words)
   $('form').trigger('reset')
+  setTimeout(() => {
+    $('#yeet-display')
+      .text('')
+      .removeClass('animated')
+  }, 5000)
 }
 
 const onError = function () {

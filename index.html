@@ -19,6 +19,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true"><span class="navbar-toggler-icon"></span></button>
     <div id="navb" class="navbar-collapse collapse hide">
       <ul class="nav navbar-nav navbar-left">
+        <li class="nav-item"><a class="nav-link" href="#">The Void's Collection</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
       </ul>
       <div class="login">
@@ -54,6 +55,7 @@
               </div>
             </ul>
           </li>
+        </ul>
       </div>
       <div class="logout">
         <ul class="nav navbar-nav navbar-right">
@@ -87,23 +89,21 @@
           </li>
         </ul>
       </div>
-      </ul>
     </div>
   </nav>
-  <!-- TODO hide the following until logged in -->
   <main>
     <div id="message"></div>
-    <p id="thought-message"></p>
+    <div id="yeet-display" class="animated bounceOut infinite"></div>
     <div class="logout">
-      <div class="modal-dialog modal-lg void-collection" role="document">
+      <div id="void-collection" class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" class="void-title">Void's Collection of All Yeets</h5>
-            <form id="index-thoughts">
+            <!-- <form id="index-thoughts">
               <input type="submit" value="Get All Thoughts" class="btn btn-outline-info" />
             </form>
 
-            <button id="clearThoughtsButton" class="btn btn-outline-warning">Clear Thoughts!</button>
+            <button id="clearThoughtsButton" class="btn btn-outline-warning">Clear Thoughts!</button> -->
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
