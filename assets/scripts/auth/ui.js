@@ -30,8 +30,7 @@ const signInSuccess = function (data) {
   }, 3500)
   store.user = data.user
   $('.login').css('display', 'none')
-  $('.logout')
-    .css('display', 'block')
+  $('.logout').css('display', 'block')
 }
 
 const signOutSuccess = function () {

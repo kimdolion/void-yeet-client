@@ -4,11 +4,6 @@
 const showThoughtsTemplate = require('../templates/yeet-listing.handlebars')
 
 const onIndexSuccess = (responseData) => {
-//   const thoughts = responseData.thoughts
-//   thoughts.forEach(thought => {
-//     $('#message').append(`<p>${thought.id}: ${thought.words}</p>`)
-//   })
-// }
   const showThoughtsHtml = showThoughtsTemplate({ thoughts: responseData.thoughts })
   $('.content').html(showThoughtsHtml)
 }
