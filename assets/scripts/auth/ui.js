@@ -13,11 +13,10 @@ const signUpSuccess = function (data) {
     $('#message')
       .text('')
       .removeClass('success')
-  }, 4000)
+  }, 3500)
 }
 
 const signInSuccess = function (data) {
-  console.log('sign in success')
   $('#message')
     .text('Signed in successfully')
     .removeClass()
@@ -28,7 +27,7 @@ const signInSuccess = function (data) {
     $('#message')
       .text('')
       .removeClass('success')
-  }, 4000)
+  }, 3500)
   store.user = data.user
   $('.login').css('display', 'none')
   $('.logout')
@@ -48,7 +47,7 @@ const signOutSuccess = function () {
     $('#message')
       .text('')
       .removeClass('success')
-  }, 4000)
+  }, 3500)
 }
 
 const changePasswordSuccess = function () {
@@ -63,11 +62,10 @@ const changePasswordSuccess = function () {
     $('#message')
       .text('')
       .removeClass('success')
-  }, 4000)
+  }, 3500)
 }
 
 const onError = function () {
-  console.log('something failed')
   $('#message')
     .text('Something went wrong, please try again.')
     .addClass('failure')
@@ -77,7 +75,7 @@ const onError = function () {
     $('#message')
       .text('')
       .removeClass('failure')
-  }, 4000)
+  }, 3500)
 }
 
 module.exports = {
