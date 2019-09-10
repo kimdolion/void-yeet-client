@@ -40,9 +40,11 @@ const signOutSuccess = function () {
     .removeClass()
     .addClass('success')
   $('form').trigger('reset')
+  $('.content').empty()
   store.user = null
   $('.logout').css('display', 'none')
   $('.login').css('display', 'block')
+  $('#thought-display').text('')
   setTimeout(() => {
     $('#message')
       .text('')

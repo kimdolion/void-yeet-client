@@ -33,15 +33,14 @@ const onClearThoughts = () => {
   $('.content').empty()
 }
 
-const onUpdateSuccess = function (responseData) {
-  console.log('update success', responseData)
-  const text = responseData.thought.words
-  $('#message').text('Updating thought: ' + text)
+const onUpdateSuccess = () => {
+  $('form').trigger('reset')
+  // const text = responseData.thought.words
+  // $('#message').append('Updating thought: ' + text)
 }
 
 const onCreateSuccess = function (responseData) {
-  $('#hideUntilNewGame')
-    .css('display', 'block')
+  $('form').trigger('reset')
 }
 
 const onError = function () {
