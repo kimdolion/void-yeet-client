@@ -41,7 +41,8 @@ const onUpdateSuccess = () => {
 
 const onCreateSuccess = function (responseData) {
   $('#yeet-display')
-    .html('Preparing to yeet: ' + responseData.thought.words)
+    .html(responseData.thought.words)
+    .addClass('animated')
   $('form').trigger('reset')
   setTimeout(() => {
     $('#yeet-display')

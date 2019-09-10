@@ -14,10 +14,8 @@ const onGetThoughts = event => {
 
 const onShowThought = event => {
   event.preventDefault()
-
   const form = event.target
   const formData = getFormFields(form)
-
   api.showThought(formData)
     .then(ui.onShowSuccess)
     .catch(ui.onError)
