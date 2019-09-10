@@ -3,6 +3,11 @@
 body {
   background-color: black;
   color: silver;
+  font-size: 3vh;
+}
+
+footer {
+  font-size: 2.5vh;
 }
 
 main {
@@ -47,10 +52,10 @@ main {
 }
 
 #yeet-display {
-  font-size: 3vw;
-  height: 2vh;
+  font-size: 10vh;
+  // height: 4vh;
   margin: 0 auto;
-  width: 10vw;
+  width: auto;
 }
 
 @keyframes zoomOutDown {
