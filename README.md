@@ -45,6 +45,7 @@ Animation
 - Users choose the animate.css styling for the words
 - Replay button
 - Legitimate resources to connect with when the negative thoughts aren't going away
+- Tie the number of stars in the background to the number of thoughts/characters of thoughts a person has yeeted
 
 ## Additional Resources
-[Heroku Examples](https://void-yeet.herokuapp.com/examples)
+[Medium: Animated Galaxy Background](https://medium.com/@jensaxena/css-tutorial-animated-geometric-galaxy-background-ad3835c36ce1)
