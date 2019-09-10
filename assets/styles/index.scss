@@ -23,7 +23,7 @@ body {
   font-size: 3vh;
   height: 100vh;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
 }
 
 footer {
@@ -33,12 +33,12 @@ footer {
   left: 20px;
   overflow: hidden;
   position: absolute;
-  width: 100%;
+  width: 100vw;
 }
 
 main {
   margin: 0 auto;
-  padding: 10px 20px;
+  // padding: 10px 20px;
 }
 
 .animated {
@@ -56,7 +56,7 @@ main {
   background-color: $bg-color;
   color: $main-font-color;
   min-width: 480px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .failure {
@@ -70,11 +70,15 @@ main {
 .length {
   align-items: center;
   background-color: $bg-color;
-  width: 100%;
+  width: auto;
 }
 
 .logout {
   display: none;
+}
+
+.navbar {
+  width: 100vw;
 }
 
 .navbar-brand {

@@ -21,11 +21,13 @@ const onGetThoughtsSuccess = responseData => {
 }
 
 const onShowSuccess = function (responseData) {
+  $('form').trigger('reset')
   $('#thought-display').text('Showing past yeet: ' + responseData.thought.words)
 }
 
 const onClearThoughts = () => {
   $('.content').empty()
+  $('form').trigger('reset')
 }
 
 const onUpdateSuccess = () => {
