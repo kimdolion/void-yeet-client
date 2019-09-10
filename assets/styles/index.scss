@@ -5,6 +5,11 @@ body {
   color: silver;
 }
 
+main {
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
 .failure {
   background-color: red;
   border: 2px solid red;
@@ -17,12 +22,19 @@ body {
   display: none;
 }
 
+.section {
+  min-width: 10vh;
+}
 .success {
   background-color: green;
   border: 2px solid green;
   color: black;
   font-size: 3vh;
   text-align: center;
+}
+
+.section {
+  background-color: black;
 }
 
 /* General sizing */

@@ -11,16 +11,6 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.onError)
-
-  const signInUp = () => {
-    api.signIn(data)
-      .then(ui.signInSuccess)
-      .catch(ui.failure)
-  }
-  api.signUp(data)
-    .then(ui.signUpSuccess)
-    .then(setTimeout(signInUp, 1000))
-    .catch(ui.failure)
 }
 
 const onSignIn = function (event) {
@@ -35,7 +25,7 @@ const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+    .catch(ui.onError)
 }
 
 const onChangePassword = function (event) {

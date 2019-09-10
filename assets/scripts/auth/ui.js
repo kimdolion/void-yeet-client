@@ -8,6 +8,7 @@ const signUpSuccess = function (data) {
     .removeClass()
     .addClass('success')
   $('form').trigger('reset')
+  $('.show').removeClass('show')
   setTimeout(() => {
     $('#message')
       .text('')
@@ -22,6 +23,7 @@ const signInSuccess = function (data) {
     .removeClass()
     .addClass('success')
   $('form').trigger('reset')
+  $('.show').removeClass('show')
   setTimeout(() => {
     $('#message')
       .text('')
@@ -42,25 +44,11 @@ const signOutSuccess = function () {
   store.user = null
   $('.logout').css('display', 'none')
   $('.login').css('display', 'block')
-  $('.box')
-    .html('')
-    .css('background-color', 'white')
-  $('#gameboard-message')
-    .html('')
-    .css('background-color', 'white')
   setTimeout(() => {
     $('#message')
       .text('')
-      .css('background-color', 'white')
       .removeClass('success')
   }, 4000)
-}
-
-const signOutFailure = function () {
-  $('#message')
-    .text('Error on sign out')
-    .removeClass()
-    .addClass('failure')
 }
 
 const changePasswordSuccess = function () {
@@ -70,7 +58,7 @@ const changePasswordSuccess = function () {
     .removeClass()
     .addClass('success')
   $('form').trigger('reset')
-  $('#hide').css('display', 'block')
+  $('.show').removeClass('show')
   setTimeout(() => {
     $('#message')
       .text('')
@@ -84,6 +72,7 @@ const onError = function () {
     .text('Something went wrong, please try again.')
     .addClass('failure')
   $('form').trigger('reset')
+  $('.show').removeClass('show')
   setTimeout(() => {
     $('#message')
       .text('')
@@ -95,7 +84,6 @@ module.exports = {
   signUpSuccess,
   signInSuccess,
   signOutSuccess,
-  signOutFailure,
   changePasswordSuccess,
   onError
 }
