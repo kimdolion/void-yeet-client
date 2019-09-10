@@ -99,7 +99,7 @@ main {
 }
 
 .space {
-  background: $bg-color center / 200px 200px;
+  background: $bg-color center / 150px 150px;
   bottom: 0;
   height: 100vh;
   left: 0;
@@ -110,7 +110,7 @@ main {
 }
 
 .stars1 {
-  animation: space 90s ease-in-out infinite;
+  animation: space 160s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 25px 5px, $star-color, $star-grad),
   radial-gradient($star-size1 at 50px 25px, $star-color, $star-grad),
@@ -121,7 +121,7 @@ main {
 }
 
 .stars2 {
-  animation: space 180s ease-in-out infinite;
+  animation: space 120s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 75px 161px, $star-color, $star-grad),
   radial-gradient($star-size1 at 100px 35px, $star-color, $star-grad),
@@ -132,7 +132,7 @@ main {
 }
 
 .stars3 {
-  animation: space 240s ease-in-out infinite;
+  animation: space 90s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 10px 10px, $star-color, $star-grad),
   radial-gradient($star-size1 at 150px 150px, $star-color, $star-grad),
@@ -143,7 +143,7 @@ main {
 }
 
 .stars4 {
-  animation: space 180s ease-in-out infinite;
+  animation: space 60s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 43px 110px, $star-color, $star-grad),
   radial-gradient($star-size1 at 15px 170px, $star-color, $star-grad),
@@ -160,15 +160,7 @@ main {
   margin: 0 auto;
   width: auto;
 }
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes space {
   40% {
     opacity: .75;

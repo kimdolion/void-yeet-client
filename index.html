@@ -99,23 +99,20 @@
       <button type="button" class="btn btn-light" data-toggle="modal" data-target="#void-collection">The Void's Collection</button>
       <br>
       <br>
-      <form id="create-thought" class="form-inline">
-        <h5>Create One Yeet:</h5>
-        <input type="text" placeholder="A thought to yeet?" name="thought[words]" class="input-field" required>
-        <button type="submit" class="btn btn-outline-light">YEET</button>
-      </form>
-      <br>
-      <form id="show-thought" class="form-inline">
-        <h5>Show One Yeet:</h5>
-        <input type="number" placeholder="Enter Yeet ID" name="thought[id]" min="0" required>
-        <button type="submit" class="btn btn-outline-light">Submit</button>
-      </form>
-      <br>
-      <div class="mx-auto center"><h5>Preparing to yeet:</h5>
-        <div id="yeet-display"></div>
+      <div class="row justify-content-center">
+        <form id="create-thought" class="form-inline">
+          <h5>Create One Yeet:</h5>
+          <input type="text" placeholder="A thought to yeet?" name="thought[words]" class="input-field" required>
+          <button type="submit" class="btn btn-outline-light">YEET</button>
+        </form>
       </div>
-
-      <div id="thought-display"></div>
+      <br>
+      <div class="row justify-content-center">
+        <div>
+          <h3>Preparing to yeet:</h3>
+          <div id="yeet-display"></div>
+        </div>
+      </div>
 
       <!-- Modal -->
       <div class="modal fade" id="void-collection" tabindex="-1" role="dialog" aria-labelledby="voidCollection" aria-hidden="true">
@@ -135,6 +132,12 @@
             <div class="modal-body data-">
               <div id="length" class="length"></div>
               <br>
+              <form id="show-thought">
+                <h5 class="bg-dark">Show One Yeet:</h5>
+                <input type="number" placeholder="Enter Yeet ID" name="thought[id]" min="0" required>
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </form>
+              <div id="thought-display"></div>
               <div id="content" class="content"></div>
             </div>
             <div class="modal-footer">
@@ -145,8 +148,9 @@
       </div>
     </div>
   </main>
-  <footer class="">
-    <p>Made by Kimdolion | <a href="https://github.com/kimdolion/void-yeet-client">Github</a> | Credits </p>
+  <footer>
+    <p>Made by Kimdolion | <a href="https://github.com/kimdolion/void-yeet-client">Github</a>
+    </p>
   </footer>
 </body>
 
