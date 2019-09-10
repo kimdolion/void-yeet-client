@@ -12,6 +12,13 @@ const onGetThoughts = event => {
     .catch(ui.onError)
 }
 
+const onGetThoughtsLength = function () {
+  const data = getFormFields(event.target)
+  api.indexThoughts(data)
+    .then(ui.onGetThoughtsSuccess)
+    .catch(ui.onError)
+}
+
 const onShowThought = event => {
   event.preventDefault()
   const form = event.target
@@ -62,7 +69,7 @@ const addHandlers = () => {
   $('#create-thought').on('submit', onCreateThought)
   $('.content').on('submit', '#update-thought', onUpdateThought)
   $('.content').on('click', '.delete-button', onDeleteThought)
-  // $('#thoughts-collection').on('click', onGetThoughtsLength)
+  $('#getLengthButton').on('click', onGetThoughtsLength)
 }
 
 module.exports = {

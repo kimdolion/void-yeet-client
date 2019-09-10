@@ -27,6 +27,10 @@ Updated backend some more once I realized that the Create action was logging the
 Create
   When I created a thought to send to the api, the api was logging the words as null. Console log registered them under title. I hadn't realized how the HTML was interacting with everything else and started searching through my API and my front-end JS files to figure out where title was coming from. Turns out I setup my form for create incorrectly. Console log is my best friend. Probably could have solved that problem faster using find but I wanted to make sure I understood the pathways of where the information was coming from. Also legitimately forgot that the HTML was as important to the muscles that is JS.
 
+Animation
+  I struggled to get the animation working because I wasn't sure exactly how to target what the user had just created. I did not want to overcomplicate the create action so I created another div that would take the most recent entry in which I could then target with the animation. Getting the animation setup was a little confusing at first, so I tried out different animations just to see how everything interact with each other. I realized I could use the create event to add an animation class that would also be removed afterwards to prevent the animation from replaying.
+
+
 ## Unsolved Problems
 
 
@@ -38,7 +42,7 @@ Create
 [ERD](https://docs.google.com/document/d/1GELci8kxVrlS7039vx3CMMipWjQ_RotPNJauMfnQScE/edit?usp=sharing)
 
 ## Stretch goals
-- Choose the animate.css styling for the words
+- Users choose the animate.css styling for the words
 - Replay button
 - Legitimate resources to connect with when the negative thoughts aren't going away
 

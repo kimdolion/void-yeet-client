@@ -8,17 +8,17 @@ const onIndexSuccess = (responseData) => {
   $('.content').html(showThoughtsHtml)
 }
 
-// const onGetThoughtsSuccess = responseData => {
-//   if (responseData.thoughts.length > 0) {
-//     const lengthYeets = responseData.thoughts.length
-//     $('#yeets-length')
-//       .text(`You've Yeeted ${lengthYeets} Thoughts!`)
-//     setTimeout(() => {
-//       $('#yeets-length')
-//         .text('')
-//     }, 5000)
-//   }
-// }
+const onGetThoughtsSuccess = responseData => {
+  if (responseData.thoughts.length > 0) {
+    const lengthYeets = responseData.thoughts.length
+    $('#length')
+      .text(`You've Yeeted ${lengthYeets} Thoughts!`)
+    setTimeout(() => {
+      $('#length')
+        .text('')
+    }, 4000)
+  }
+}
 
 const onShowSuccess = function (responseData) {
   $('#thought-display').text('Showing past yeet: ' + responseData.thought.words)
@@ -30,8 +30,6 @@ const onClearThoughts = () => {
 
 const onUpdateSuccess = () => {
   $('form').trigger('reset')
-  // const text = responseData.thought.words
-  // $('#message').append('Updating thought: ' + text)
 }
 
 const onCreateSuccess = function (responseData) {
@@ -43,7 +41,7 @@ const onCreateSuccess = function (responseData) {
     $('#yeet-display')
       .text('')
       .removeClass('animated')
-  }, 5000)
+  }, 4000)
 }
 
 const onError = function () {
@@ -60,7 +58,7 @@ const onError = function () {
 
 module.exports = {
   onIndexSuccess,
-  // onGetThoughtsSuccess,
+  onGetThoughtsSuccess,
   onShowSuccess,
   onClearThoughts,
   onUpdateSuccess,

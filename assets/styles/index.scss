@@ -1,9 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
+// colors
+$black: #000;
+$silver: #c0c0c0;
+$red: #ff0000;
+$green: #008000;
+$bg-color: $black;
+
+// variables for colors
+$failure-color: $red;
+$success-color: $green;
+$main-font-color: $silver;
+$message-font: $black;
+
 
 body {
-  background-color: black;
-  color: silver;
+  background-color: $bg-color;
+  color: $main-font-color;
   font-size: 3vh;
+  min-width: 480px;
+  width: 100%;
 }
 
 footer {
@@ -15,17 +30,31 @@ main {
   padding: 10px 20px;
 }
 
+.animated {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: zoomOutDown;
+}
+
 .content {
-  background-color: black;
-  color: silver;
+  background-color: $bg-color;
+  color: $main-font-color;
+  min-width: 480px;
 }
 
 .failure {
-  background-color: red;
-  border: 2px solid red;
-  color: black;
+  background-color: $failure-color;
+  border: 2px solid $failure-color;
+  color: $message-font;
   font-size: 3vh;
   text-align: center;
+}
+
+.length {
+  align-items: center;
+  background-color: $bg-color;
+  width: 100%;
 }
 
 .logout {
@@ -33,22 +62,20 @@ main {
 }
 
 .success {
-  background-color: green;
-  border: 2px solid green;
-  color: black;
+  background-color: $success-color;
+  border: 2px solid $success-color;
+  color: $message-font;
   font-size: 3vh;
   text-align: center;
 }
 
 .section {
-  background-color: black;
-}
-
-.animated {
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-name: zoomOutDown;
+  background-color: $bg-color;
+  color: $main-font-color;
+  font-size: 1.5vh;
+  margin: inherit;
+  padding: 10px 20px;
+  width: 100%;
 }
 
 #yeet-display {
@@ -57,13 +84,13 @@ main {
   margin: 0 auto;
   width: auto;
 }
-
 @keyframes zoomOutDown {
   40% {
     animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
     opacity: 1;
     transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
   }
+
   100% {
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
     opacity: 0;
