@@ -1,5 +1,5 @@
 {{#each thoughts as |thought|}}
-  <section data-id="{{thought.id}}" class="border">
+  <section data-id="{{thought.id}}" class="border mx-auto">
     <h5>Yeet ID: {{thought.id}}</h5>
     <h5>You yeeted: </h5>
     <p>
@@ -11,8 +11,8 @@
     </p>
     <form id="update-thought" data-id="{{thought.id}}">
       <h6>Update This Yeet:</h6>
-      <input type="text" placeholder="Add more to this..." name="thought[words]" required>
-      <button class="btn btn-sm btn-outline-light update-button">Update</button>
+      <input type="text" placeholder="Change this?" name="thought[words]" required>
+      <button class="btn btn-sm btn-outline-light update-button">Change</button>
     </form>
     <button data-id="{{thought.id}}" class="btn btn-sm btn-outline-danger delete-button">Delete!</button>
   </section>
