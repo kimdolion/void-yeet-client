@@ -63,7 +63,7 @@ const onCreateThought = event => {
 }
 
 const addHandlers = () => {
-  $('#index-thoughts').on('submit', onGetThoughts)
+  $('#index-thoughts').on('click', onGetThoughts)
   $('#show-thought').on('submit', onShowThought)
   $('#clearThoughtsButton').on('click', onClearThoughts)
   $('#create-thought').on('submit', onCreateThought)
