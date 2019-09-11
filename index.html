@@ -28,15 +28,13 @@
           <li class="dropdown border rounded border-light">
             <a class="dropdown-toggle" data-toggle="dropdown">Sign Up<span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-              <div class="col-4">
-                <div class="text-center">
-                  <h3><b>Sign Up</b></h3>
-                </div>
-                <form id="sign-up" class="form fill">
+              <div class="row col-lg-6 form-group">
+                <label for="sign-up" class="justify-content-center">Sign Up</label>
+                <form id="sign-up" class="border">
                   <input type="text" name="credentials[email]" placeholder="Email@email.com">
                   <input type="password" name="credentials[password]" placeholder="Password">
                   <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-                  <input type="submit" class="btn btn-primary" value="Sign Up">
+                  <input type="submit" class="btn btn-block btn-primary" value="Sign Up">
                 </form>
               </div>
             </ul>
@@ -44,14 +42,12 @@
           <li class="dropdown border rounded border-light">
             <a class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-              <div class="col-4">
-                <div class="text-center">
-                  <h3><b>Log In</b></h3>
-                </div>
-                <form id="sign-in" class="form fill">
+              <div class="row col-lg-6 form-group">
+                <label for="sign-in" class="justify-content-center">Sign In</label>
+                <form id="sign-in">
                   <input type="text" name="credentials[email]" placeholder="Email@email.com">
                   <input type="password" name="credentials[password]" placeholder="Password">
-                  <input type="submit" class="btn btn-info" value="Sign In">
+                  <input type="submit" class="btn btn-block btn-info" value="Sign In">
                 </form>
               </div>
             </ul>
@@ -61,16 +57,14 @@
       <div class="logout justify-content-space-between">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown border rounded border-light">
-            <a class="dropdown-toggle" data-toggle="dropdown">Change Password <span class="caret"> </span></a>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-              <div class="col-lg-4">
-                <div class="text-center">
-                  <h3><b>Change Password</b></h3>
-                </div>
-                <form id="change-password" class="form fill border-light">
+            <a class="dropdown-toggle text-center" data-toggle="dropdown">Change Password <span class="caret"> </span></a>
+            <ul class="dropdown-menu" role="menu">
+              <div class="row col-lg-6 form-group">
+                <label for="change-password" class="justify-content-center">Change Password</label>
+                <form id="change-password" class="form border-light">
                   <input type="password" name="passwords[old]" placeholder="Old Password">
                   <input type="password" name="passwords[new]" placeholder="New Password">
-                  <input type="submit" class="btn btn-secondary" value="Change Password">
+                  <input type="submit" class="btn btn-block btn-secondary" value="Change Password">
                 </form>
               </div>
             </ul>
