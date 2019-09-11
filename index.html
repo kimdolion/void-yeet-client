@@ -23,14 +23,14 @@
     <a class="navbar-brand" href="#">Yeet into the Void</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true"><span class="navbar-toggler-icon"></span></button>
     <div id="navb" class="navbar-collapse collapse hide justify-content-end">
-      <div class="login justify-content-end">
+      <div class="login">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown border rounded border-light">
             <a class="dropdown-toggle" data-toggle="dropdown">Sign Up<span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
               <div class="row col-lg-6 form-group">
                 <label for="sign-up" class="justify-content-center">Sign Up</label>
-                <form id="sign-up" class="border">
+                <form id="sign-up">
                   <input type="text" name="credentials[email]" placeholder="Email@email.com">
                   <input type="password" name="credentials[password]" placeholder="Password">
                   <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
@@ -114,22 +114,45 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body bg-dark rounded crudButtons">
-              <div class="d-flex justify-content-around">
-                <button id="index-thoughts" type="submit" value="Get All Thoughts!" class="btn btn-info">Get All Yeets!</button>
-                <button id="getLengthButton" class="btn btn-light">How many Yeets?</button>
-                <button id="clearThoughtsButton" class="btn btn-warning">Clear Yeets...</button>
+            <div class="modal-body bg-dark rounded">
+              <div class="container sticky-top">
+                <div class="row">
+                  <div class="col col-6">
+                    <button id="index-thoughts" type="submit" value="Get All Thoughts!" class="btn btn-lg btn-block btn-info">Get All Yeets!</button>
+                  </div>
+                  <div class="col col-6">
+                    <button id="clearThoughtsButton" class="btn btn-lg btn-block btn-warning">Clear Yeets...</button>
+                  </div>
+                </div>
               </div>
-              <hr>
-              <div id="length" class="text-center length"></div>
-              <div class="form-group bg-dark">
-                <label for="show-thought">Show One Yeet:</label>
-                <form id="show-thought" class="form thoughtShow">
-                  <input type="number" placeholder="Enter Yeet ID" name="thought[id]" min="0" class="rounded" required>
-                  <button type="submit" class="btn btn-light">Submit</button>
-                </form>
+              <br>
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <button id="getLengthButton" class="btn btn-block btn-light">How many Yeets?</button>
+                  </div>
+                  <div class="col-6">
+                    <div class="rounded lengthbg">You've Yeeted: <span id="length"></span></div>
+                  </div>
+                </div>
               </div>
-              <div id="thought-display" class="bg-dark"></div>
+              <br>
+              <div class="container">
+                <div class="row">
+                  <div class="form-group bg-dark col col-6">
+                    <label for="show-thought">Show Old Yeet:</label>
+                    <form id="show-thought" class="form thoughtShow">
+                      <input type="number" placeholder="Enter Yeet ID" name="thought[id]" min="0" class="rounded form-control" required>
+                      <button type="submit" class="btn btn-block btn-light">Submit</button>
+                    </form>
+                  </div>
+                  <div class="col col-6">
+                    <label for="thought-display">Showing Old Yeet:</label>
+                    <div id="thought-display" class="oldyeet rounded"></div>
+                  </div>
+                </div>
+              </div>
+              <br>
               <div id="content" class="content"></div>
             </div>
             <div class="modal-footer bg-dark">

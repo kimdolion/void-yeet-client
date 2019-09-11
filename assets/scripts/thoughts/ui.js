@@ -11,18 +11,13 @@ const onIndexSuccess = (responseData) => {
 const onGetThoughtsSuccess = responseData => {
   if (responseData.thoughts.length >= 0) {
     const lengthYeets = responseData.thoughts.length
-    $('#length')
-      .text(`You've Yeeted ${lengthYeets} Thoughts!`)
-    setTimeout(() => {
-      $('#length')
-        .text('')
-    }, 4000)
+    $('#length').text(`${lengthYeets} Thoughts!`)
   }
 }
 
 const onShowSuccess = function (responseData) {
   $('form').trigger('reset')
-  $('#thought-display').text('Showing past yeet: ' + responseData.thought.words)
+  $('#thought-display').text(responseData.thought.words)
 }
 
 const onClearThoughts = () => {

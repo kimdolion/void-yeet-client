@@ -40,6 +40,7 @@ const signOutSuccess = function () {
     .addClass('success')
   $('form').trigger('reset')
   $('.content').empty()
+  $('span').text('')
   store.user = null
   $('.logout').css('display', 'none')
   $('.login').css('display', 'block')
