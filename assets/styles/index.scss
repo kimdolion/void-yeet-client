@@ -113,7 +113,7 @@ main {
 }
 
 .stars1 {
-  animation: space 160s ease-in-out infinite;
+  animation: space 300s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 25px 5px, $star-color, $star-grad),
   radial-gradient($star-size1 at 50px 25px, $star-color, $star-grad),
@@ -124,7 +124,7 @@ main {
 }
 
 .stars2 {
-  animation: space 120s ease-in-out infinite;
+  animation: space 240s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 75px 161px, $star-color, $star-grad),
   radial-gradient($star-size1 at 100px 35px, $star-color, $star-grad),
@@ -135,7 +135,7 @@ main {
 }
 
 .stars3 {
-  animation: space 90s ease-in-out infinite;
+  animation: space 180s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 10px 10px, $star-color, $star-grad),
   radial-gradient($star-size1 at 150px 150px, $star-color, $star-grad),
@@ -146,7 +146,7 @@ main {
 }
 
 .stars4 {
-  animation: space 60s ease-in-out infinite;
+  animation: space 120s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 43px 110px, $star-color, $star-grad),
   radial-gradient($star-size1 at 15px 170px, $star-color, $star-grad),
@@ -158,10 +158,8 @@ main {
 }
 
 #yeet-display {
-  font-size: 10vh;
-  // height: 4vh;
-  margin: 0 auto;
-  width: auto;
+  color: $red;
+  font-size: 8vh;
 }
 
 @keyframes space {

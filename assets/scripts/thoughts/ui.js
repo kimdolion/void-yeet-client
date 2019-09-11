@@ -9,7 +9,7 @@ const onIndexSuccess = (responseData) => {
 }
 
 const onGetThoughtsSuccess = responseData => {
-  if (responseData.thoughts.length > 0) {
+  if (responseData.thoughts.length >= 0) {
     const lengthYeets = responseData.thoughts.length
     $('#length')
       .text(`You've Yeeted ${lengthYeets} Thoughts!`)
@@ -38,12 +38,16 @@ const onCreateSuccess = function (responseData) {
   $('#yeet-display')
     .text(responseData.thought.words)
     .addClass('animated')
-  $('form').trigger('reset')
+  $('#create-thought')
+    .trigger('reset')
+    .hide()
   setTimeout(() => {
     $('#yeet-display')
       .text('')
       .removeClass('animated')
-  }, 4000)
+    $('#create-thought')
+      .show()
+  }, 2000)
 }
 
 const onError = function () {
