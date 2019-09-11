@@ -36,7 +36,7 @@ const onUpdateSuccess = () => {
 
 const onCreateSuccess = function (responseData) {
   $('#yeet-display')
-    .html(responseData.thought.words)
+    .text(responseData.thought.words)
     .addClass('animated')
   $('form').trigger('reset')
   setTimeout(() => {

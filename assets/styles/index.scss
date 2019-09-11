@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap'; // colors
 $black: #000;
-$silver: #c0c0c0;
+$silver: #efefef;
 $red: #ff0000;
 $green: #008000;
 $white: #ffffff;
@@ -38,7 +38,7 @@ footer {
 
 main {
   margin: 0 auto;
-  // padding: 10px 20px;
+  padding: 5px 10px;
 }
 
 .animated {
@@ -55,7 +55,6 @@ main {
 .content {
   background-color: $bg-color;
   color: $main-font-color;
-  min-width: 480px;
   padding: 10px;
 }
 

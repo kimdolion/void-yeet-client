@@ -5,9 +5,10 @@
     To be more specific, to yeet the bad thoughts into the darkness, where they can live away from you, or be permanently deleted.
 
 [Void-Yeet Github Pages Client](https://kimdolion.github.io/void-yeet-client/)
+[Void-Yeet Frontend Repo](https://github.com/kimdolion/void-yeet-client)
 [Void-Yeet Heroku API](https://void-yeet.herokuapp.com)
 [Void-Yeet Backend Repo](https://github.com/kimdolion/void-yeet-backend)
-[Void-Yeet Frontend Repo](https://github.com/kimdolion/void-yeet-client)
+
 
 ## Technologies Used
 HTML, CSS, JavaScript, Boostrap, AJAX

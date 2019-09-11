@@ -58,7 +58,7 @@
           </li>
         </ul>
       </div>
-      <div class="logout justify-content-between">
+      <div class="logout justify-content-space-between">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown border rounded border-light">
             <a class="dropdown-toggle" data-toggle="dropdown">Change Password <span class="caret"> </span></a>
@@ -75,18 +75,10 @@
               </div>
             </ul>
           </li>
-          <li class="dropdown border rounded border-light">
-            <a class="dropdown-toggle" data-toggle="dropdown">Sign Out <span class="caret"> </span></a>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-              <div class="col-lg-4">
-                <div class="text-center">
-                  <h3><b>Sign Out</b></h3>
-                </div>
-                <form id="sign-out" class="form fill">
-                  <input type="submit" class="btn btn-danger" value="Sign Out">
-                </form>
-              </div>
-            </ul>
+          <li>
+            <form id="sign-out" class="form">
+              <input type="submit" class="btn btn-lg btn-danger" value="Sign Out">
+            </form>
           </li>
         </ul>
       </div>
@@ -95,6 +87,10 @@
   <main>
     <div id="message"></div>
     <br>
+    <div class="login text-center">
+      <p>Welcome to Yeet-into the Void. <br> Your personal void collection. <br><br><br> A place for you to collect your thoughts then... <br> YEET them into the void. <br><br> Sign up to start yeeting.
+      </p>
+    </div>
     <div class="logout">
       <button type="button" class="btn btn-light" data-toggle="modal" data-target="#void-collection">The Void's Collection</button>
       <br>
@@ -109,8 +105,8 @@
       <br>
       <div class="row justify-content-center">
         <div>
-          <h3>Preparing to yeet:</h3>
-          <div id="yeet-display"></div>
+          <h3 class="text-center">Preparing to yeet:</h3>
+          <div id="yeet-display" class="text-center"></div>
         </div>
       </div>
 
@@ -118,7 +114,7 @@
       <div class="modal fade" id="void-collection" tabindex="-1" role="dialog" aria-labelledby="voidCollection" aria-hidden="true">
         <div class="modal-dialog modal-lg " role="document">
           <div class="modal-content align-items-center">
-            <div class="modal-header">
+            <div class="modal-header d-flex justify-content-between">
               <h5 class="modal-title align-content" id="voidCollection"></h5>
               <form id="index-thoughts">
                 <input type="submit" value="Get All Thoughts!" class="btn btn-info" />
@@ -130,10 +126,10 @@
               </button>
             </div>
             <div class="modal-body data-">
-              <div id="length" class="length"></div>
+              <div id="length" class="text-center length"></div>
               <br>
               <form id="show-thought">
-                <h5 class="bg-dark">Show One Yeet:</h5>
+                <h5>Show One Yeet:</h5>
                 <input type="number" placeholder="Enter Yeet ID" name="thought[id]" min="0" required>
                 <button type="submit" class="btn btn-dark">Submit</button>
               </form>
