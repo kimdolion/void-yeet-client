@@ -38,6 +38,7 @@ const onUpdateThought = event => {
   const id = $(event.target).data('id')
   const formData = getFormFields(event.target)
   api.updateThought(formData, id)
+    .then(ui.onUpdateSuccess)
     .then(function () {
       onGetThoughts(event)
     })

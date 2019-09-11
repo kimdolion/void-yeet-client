@@ -16,6 +16,9 @@ const onGetThoughtsSuccess = responseData => {
 }
 
 const onShowSuccess = function (responseData) {
+  $('#cru-message')
+    .text('')
+    .removeClass('success')
   $('form').trigger('reset')
   $('#thought-display').text(responseData.thought.words)
 }
@@ -26,7 +29,15 @@ const onClearThoughts = () => {
 }
 
 const onUpdateSuccess = () => {
+  $('#cru-message')
+    .text('Updated a yeet!')
+    .addClass('success')
   $('form').trigger('reset')
+  setTimeout(() => {
+    $('#cru-message')
+      .text('')
+      .removeClass('success')
+  }, 4000)
 }
 
 const onCreateSuccess = function (responseData) {
@@ -46,7 +57,7 @@ const onCreateSuccess = function (responseData) {
       .removeClass('animated')
     $('#create-thought')
       .show()
-  }, 2000)
+  }, 2500)
 }
 
 const onError = function () {
