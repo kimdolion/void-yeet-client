@@ -157,6 +157,10 @@ main {
   radial-gradient($star-size5 at 176px 104px, $star-color, $star-grad);
 }
 
+.thoughtShow {
+  padding: 5px 10px;
+}
+
 #yeet-display {
   color: $red;
   font-size: 8vh;

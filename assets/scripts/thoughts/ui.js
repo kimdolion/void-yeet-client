@@ -35,14 +35,18 @@ const onUpdateSuccess = () => {
 }
 
 const onCreateSuccess = function (responseData) {
+  $('.prepare').removeClass('invisible')
   $('#yeet-display')
+    .show()
     .text(responseData.thought.words)
     .addClass('animated')
   $('#create-thought')
     .trigger('reset')
     .hide()
   setTimeout(() => {
+    $('.prepare').addClass('invisible')
     $('#yeet-display')
+      .hide()
       .text('')
       .removeClass('animated')
     $('#create-thought')
