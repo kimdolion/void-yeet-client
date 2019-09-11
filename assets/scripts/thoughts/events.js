@@ -9,14 +9,14 @@ const onGetThoughts = event => {
   event.preventDefault()
   api.indexThoughts()
     .then(ui.onIndexSuccess)
-    .catch(ui.onError)
+    .catch(ui.onErrorModal)
 }
 
 const onGetThoughtsLength = function () {
   const data = getFormFields(event.target)
   api.indexThoughts(data)
     .then(ui.onGetThoughtsSuccess)
-    .catch(ui.onError)
+    .catch(ui.onErrorModal)
 }
 
 const onShowThought = event => {
@@ -25,7 +25,7 @@ const onShowThought = event => {
   const formData = getFormFields(form)
   api.showThought(formData)
     .then(ui.onShowSuccess)
-    .catch(ui.onError)
+    .catch(ui.onErrorModal)
 }
 
 const onClearThoughts = event => {
@@ -42,7 +42,7 @@ const onUpdateThought = event => {
     .then(function () {
       onGetThoughts(event)
     })
-    .catch(ui.onError)
+    .catch(ui.onErrorModal)
 }
 
 const onDeleteThought = event => {
@@ -52,7 +52,7 @@ const onDeleteThought = event => {
     .then(function () {
       onGetThoughts(event)
     })
-    .catch(ui.onError)
+    .catch(ui.onErrorModal)
 }
 
 const onCreateThought = event => {

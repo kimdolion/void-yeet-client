@@ -17,10 +17,15 @@ const onGetThoughtsSuccess = responseData => {
 
 const onShowSuccess = function (responseData) {
   $('#cru-message')
-    .text('')
-    .removeClass('success')
+    .text('Showing one yeet')
+    .addClass('success')
   $('form').trigger('reset')
-  $('#thought-display').text(responseData.thought.words)
+  $('#thought-display').html(responseData.thought.words)
+  setTimeout(() => {
+    $('#cru-message')
+      .text('')
+      .removeClass('success')
+  }, 3500)
 }
 
 const onClearThoughts = () => {
@@ -37,7 +42,7 @@ const onUpdateSuccess = () => {
     $('#cru-message')
       .text('')
       .removeClass('success')
-  }, 4000)
+  }, 3500)
 }
 
 const onCreateSuccess = function (responseData) {
@@ -69,7 +74,19 @@ const onError = function () {
     $('#message')
       .text('')
       .removeClass('failure')
-  }, 4000)
+  }, 3500)
+}
+
+const onErrorModal = function () {
+  $('#cru-message')
+    .text('Something went wrong, please try again.')
+    .removeClass()
+    .addClass('failure')
+  setTimeout(() => {
+    $('#cru-message')
+      .text('')
+      .removeClass('failure')
+  }, 3500)
 }
 
 module.exports = {
@@ -79,5 +96,6 @@ module.exports = {
   onClearThoughts,
   onUpdateSuccess,
   onCreateSuccess,
-  onError
+  onError,
+  onErrorModal
 }
