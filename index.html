@@ -28,7 +28,7 @@
           <li class="dropdown border rounded border-light">
             <a class="dropdown-toggle" data-toggle="dropdown">Yeet?<span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-              <div class="col-2">
+              <div>
                 <iframe src="https://giphy.com/embed/KzoZUrq40MaazLgHsg" width="480" height="479" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
               </div>
             </ul>
@@ -39,9 +39,9 @@
               <div class="row col-lg-6 form-group">
                 <label for="sign-up" class="justify-content-center">Sign Up</label>
                 <form id="sign-up">
-                  <input type="text" name="credentials[email]" placeholder="Email@email.com">
-                  <input type="password" name="credentials[password]" placeholder="Password">
-                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                  <input type="text" name="credentials[email]" placeholder="Email@email.com" autofocus required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
                   <input type="submit" class="btn btn-block btn-primary" value="Sign Up">
                 </form>
               </div>
@@ -53,8 +53,8 @@
               <div class="row col-lg-6 form-group">
                 <label for="sign-in" class="justify-content-center">Sign In</label>
                 <form id="sign-in">
-                  <input type="text" name="credentials[email]" placeholder="Email@email.com">
-                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="text" name="credentials[email]" placeholder="Email@email.com" autofocus required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
                   <input type="submit" class="btn btn-block btn-info" value="Sign In">
                 </form>
               </div>
@@ -70,8 +70,8 @@
               <div class="row col-lg-6 form-group">
                 <label for="change-password" class="justify-content-center">Change Password</label>
                 <form id="change-password" class="form border-light">
-                  <input type="password" name="passwords[old]" placeholder="Old Password">
-                  <input type="password" name="passwords[new]" placeholder="New Password">
+                  <input type="password" name="passwords[old]" placeholder="Old Password" required>
+                  <input type="password" name="passwords[new]" placeholder="New Password" required>
                   <input type="submit" class="btn btn-block btn-secondary" value="Change Password">
                 </form>
               </div>
@@ -101,7 +101,7 @@
       <div class="row justify-content-center">
         <form id="create-thought" class="form">
           <h3 class="text-center">Create One Yeet:</h3>
-          <input type="text" placeholder="A thought to yeet?" name="thought[words]" class="input-field" required>
+          <input type="text" placeholder="A thought to yeet?" name="thought[words]" class="input-field" autofocus required>
           <button type="submit" class="btn btn-outline-light">YEET</button>
         </form>
       </div>
