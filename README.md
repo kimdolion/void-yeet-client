@@ -52,11 +52,11 @@ I struggled to get the animation working because I wasn't sure exactly how to ta
 #### Styling
 My understanding of Bootstrap grew immensely with this project because I overestimated how straightforward adding or removing classes with stylings attached would be. When I had created my index buttons, it hadn't occurred to me make it easier for the user to be able to continue to access them after activating the index function. This being more obvious once I had filled my test accounts with a lot of entries that would require scrolling through to the top. Another option would have been to simply create a back to top link mechanism but I figured having sticky buttons would be far more useful than being forced to forever scroll to the end just to be jettisoned back up, which can be a visually nauseating experience.
 
+#### Update
+When a thought/yeet got updated, the entry would get switched to a weird place that didn't really seem to make sense. I honestly couldn't see a rhyme or reason to the madness that was my update button aside from knowing that it was successfully updating. I played around with the CSS to try to force the order of information on the frontend. I eventually started looking at the backend with the help of Stack Overflow research and added a quick bit of code in the API to return the index by ascending order.
+
+
 ## Unsolved Problems
-Update
-
-It updates but for some reason the entry gets appended to a weird place that doesn't really seem to make sense.
-
 Not really a true problem but I would have loved to have a better way to generating and placing the stars for the background. I'm sure it would have required utilizing JS's random math mixin to be "DRYer". For now I just had to repeatedly make stars, try to plot them without repeating myself, and rotate each div of stars. Rather tedious but it works for now.
 
 ## Wireframes and User Stories
@@ -68,8 +68,11 @@ Not really a true problem but I would have loved to have a better way to generat
 
 ## Stretch goals
 - Users choose the animate.css styling for the words
-- Replay button (particularly on individual posts that let's you reyeet without recreating the thought)
+
+- Replay button particularly on individual posts (lets you re-yeet without recreating the thought)
+
 - Legitimate resources to connect with when the negative thoughts aren't going away
+
 - Tie the number of stars in the background to the number of thoughts/characters of thoughts a person has yeeted
 
 ## Additional Resources
