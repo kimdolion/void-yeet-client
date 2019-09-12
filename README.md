@@ -53,6 +53,10 @@ I struggled to get the animation working because I wasn't sure exactly how to ta
 My understanding of Bootstrap grew immensely with this project because I overestimated how straightforward adding or removing classes with stylings attached would be. When I had created my index buttons, it hadn't occurred to me make it easier for the user to be able to continue to access them after activating the index function. This being more obvious once I had filled my test accounts with a lot of entries that would require scrolling through to the top. Another option would have been to simply create a back to top link mechanism but I figured having sticky buttons would be far more useful than being forced to forever scroll to the end just to be jettisoned back up, which can be a visually nauseating experience.
 
 ## Unsolved Problems
+Update
+
+It updates but for some reason the entry gets appended to a weird place that doesn't really seem to make sense.
+
 Not really a true problem but I would have loved to have a better way to generating and placing the stars for the background. I'm sure it would have required utilizing JS's random math mixin to be "DRYer". For now I just had to repeatedly make stars, try to plot them without repeating myself, and rotate each div of stars. Rather tedious but it works for now.
 
 ## Wireframes and User Stories
