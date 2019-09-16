@@ -23,9 +23,9 @@ body {
   background-color: $bg-color;
   color: $main-font-color;
   font-size: 3vh;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 footer {
@@ -35,7 +35,7 @@ footer {
   left: 20px;
   overflow: hidden;
   position: absolute;
-  width: 100vw;
+  width: 100%;
 }
 
 li {
@@ -89,7 +89,7 @@ main {
 .lengthbg {
   background-color: $bg-color;
   padding: 2px;
-  width: auto;
+  width: 100%;
 }
 
 .logout {
@@ -117,10 +117,11 @@ main {
 }
 
 .space {
-  background: $bg-color center / 150px 150px;
+  background: $bg-color center / 200px 200px;
   bottom: 0;
   height: 100vh;
   left: 0;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
@@ -141,9 +142,9 @@ main {
 .stars2 {
   animation: space 240s ease-in-out infinite;
   background-image:
-  radial-gradient($star-size1 at 75px 161px, $star-color, $star-grad),
+  radial-gradient($star-size1 at 75px 141px, $star-color, $star-grad),
   radial-gradient($star-size1 at 100px 35px, $star-color, $star-grad),
-  radial-gradient($star-size2 at 149px 100px, $star-color, $star-grad),
+  radial-gradient($star-size2 at 142px 100px, $star-color, $star-grad),
   radial-gradient($star-size3 at 20px 50px, $star-color, $star-grad),
   radial-gradient($star-size4 at 127px 25px, $star-color, $star-grad),
   radial-gradient($star-size4 at 56px 92px, $star-color, $star-grad);
@@ -153,10 +154,10 @@ main {
   animation: space 180s ease-in-out infinite;
   background-image:
   radial-gradient($star-size1 at 10px 10px, $star-color, $star-grad),
-  radial-gradient($star-size1 at 150px 150px, $star-color, $star-grad),
+  radial-gradient($star-size1 at 145px 145px, $star-color, $star-grad),
   radial-gradient($star-size2 at 60px 170px, $star-color, $star-grad),
   radial-gradient($star-size2 at 175px 180px, $star-color, $star-grad),
-  radial-gradient($star-size3 at 195px 95px, $star-color, $star-grad),
+  radial-gradient($star-size3 at 192px 95px, $star-color, $star-grad),
   radial-gradient($star-size4 at 95px 145px, $star-color, $star-grad);
 }
 
@@ -191,7 +192,8 @@ main {
   50% {opacity: .25;}
   60% {opacity: .75;}
   100% {opacity: .5;
-    transform: rotate(360deg);}
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes zoomOutDown {
