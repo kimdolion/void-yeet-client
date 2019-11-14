@@ -83,6 +83,10 @@ main {
   animation-name: fade;
 }
 
+.example-yeet {
+  min-width: 20rem;
+}
+
 .failure {
   background-color: $failure-color;
   border: 2px solid $failure-color;
