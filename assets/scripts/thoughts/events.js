@@ -71,6 +71,7 @@ const addHandlers = () => {
   $('.content').on('submit', '#update-thought', onUpdateThought)
   $('.content').on('click', '.delete-button', onDeleteThought)
   $('#getLengthButton').on('click', onGetThoughtsLength)
+  $('#exampleTooltip').tooltip({ boundary: 'window' })
 }
 
 module.exports = {
