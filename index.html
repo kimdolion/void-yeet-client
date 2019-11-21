@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Void Yeet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Kimberly Wilkes">
+  <meta name="og:title" content="Yeet Into The Void">
+  <meta name="og:description" content="A personal “journal” with a fun throwing (yeeting) animation and space theme. Made with: HTML5, CSS3, JavaScript, Handlebars.js, Ruby, Ruby on Rails, and a desire to throw my worries far away, preferably into space.">
+  <meta property='og:image' content="/public/void-yeet.jpg"/>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<body>
+  <div>
+    <div class="space stars1"></div>
+    <div class="space stars2"></div>
+    <div class="space stars3"></div>
+    <div class="space stars4"></div>
+  </div>
+  <br>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fill sticky-top">
+    <a class="navbar-brand" href="#">Yeet into the Void</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true"><span class="navbar-toggler-icon"></span></button>
+    <div id="navb" class="navbar-collapse collapse hide justify-content-end">
+      <div class="login">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown border rounded border-light more-space">
+            <a class="dropdown-toggle" data-toggle="dropdown">Yeet?<span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <div class="example-yeet">
+                <div style="width:100%; height:0; padding-bottom:100%; position:relative;">
+                  <p>Yeet: (verb) to throw away or get rid of something usually by flinging it far away from yourself.</p>
+                  <iframe src="https://giphy.com/embed/KzoZUrq40MaazLgHsg" width="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                </div>
+                <p><a href="https://giphy.com/gifs/jump-random-yeet-KzoZUrq40MaazLgHsg">via GIPHY</a></p>
+              </div>
+            </ul>
+          </li>
+          <li class="dropdown border rounded border-light more-space">
+            <a class="dropdown-toggle" data-toggle="dropdown">Sign Up<span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <div class="row col-lg-6 form-group">
+                <label for="sign-up" class="justify-content-center">Sign Up</label>
+                <form id="sign-up">
+                  <input type="text" name="credentials[email]" placeholder="Email@email.com" autofocus required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+                  <input type="submit" class="btn btn-block btn-primary" value="Sign Up">
+                </form>
+              </div>
+            </ul>
+          </li>
+          <li class="dropdown border rounded border-light more-space">
+            <a class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <div class="row col-lg-6 form-group">
+                <label for="sign-in" class="justify-content-center">Sign In</label>
+                <form id="sign-in">
+                  <input type="text" name="credentials[email]" placeholder="Email@email.com" autofocus required>
+                  <input type="password" name="credentials[password]" placeholder="Password" required>
+                  <input type="submit" class="btn btn-block btn-info" value="Sign In">
+                </form>
+              </div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="logout justify-content-space-between">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown border rounded border-light">
+            <a class="dropdown-toggle text-center" data-toggle="dropdown">Change Password <span class="caret"> </span></a>
+            <ul class="dropdown-menu" role="menu">
+              <div class="row col-lg-6 form-group">
+                <label for="change-password" class="justify-content-center">Change Password</label>
+                <form id="change-password" class="form border-light">
+                  <input type="password" name="passwords[old]" placeholder="Old Password" required>
+                  <input type="password" name="passwords[new]" placeholder="New Password" required>
+                  <input type="submit" class="btn btn-block btn-secondary" value="Change Password">
+                </form>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <form id="sign-out" class="form">
+              <input type="submit" class="btn btn-lg btn-block btn-danger" value="Sign Out">
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div id="message"></div>
+    <br>
+    <div class="login text-center">
+      <p>Welcome to Yeet Into The Void.</p>
+      <p>Your personal void collection. <br><br> A place for you to collect your thoughts then... <br> YEET them into the void. </p>
+      <p>Sign up to start yeeting... ***Do NOT use real logins! This is not secure yet...***
+      </p>
+
+    </div>
+    <div class="logout">
+      <span id="exampleTooltip" data-toggle="tooltip" data-placement="right" title="The Void's Collection is where you can find all the thoughts you've thrown into space and edit or delete them."><button type="button" class="btn btn-lg btn-light" data-toggle="modal" data-target="#void-collection">The Void's Collection</button></span>
+      <br>
+      <br>
+      <div class="row justify-content-center">
+        <form id="create-thought" class="form">
+          <h3 class="text-center">Create One Yeet:</h3>
+          <input type="text" placeholder="A thought to yeet?" name="thought[words]" class="input-field" autofocus required>
+          <button type="submit" class="btn btn-outline-light">YEET</button>
+        </form>
+      </div>
+      <br>
+      <div class="row justify-content-center">
+        <div class="prepare invisible">
+          <h3 class="text-center">Preparing to yeet:</h3>
+          <div id="yeet-display" class="text-center"></div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="void-collection" tabindex="-1" role="dialog" aria-labelledby="voidCollection" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-dark">
+              <h5 class="modal-title" id="voidCollection">The Void's Collection</h5>
+              <button type="button" class="close border bg-outline-light" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body bg-dark rounded">
+              <div class="container sticky-top">
+                <div class="row">
+                  <div class="col col-6">
+                    <button id="index-thoughts" type="submit" value="Get All Thoughts!" class="btn btn-lg btn-block btn-info">Get All Yeets!</button>
+                  </div>
+                  <div class="col col-6">
+                    <button id="clearThoughtsButton" class="btn btn-lg btn-block btn-warning">Clear Yeets...</button>
+                  </div>
+                  <div class="col col-12">
+                    <div id="cru-message" class="rounded"></div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <button id="getLengthButton" class="btn btn-block btn-light">How many Yeets?</button>
+                  </div>
+                  <div class="col-6">
+                    <div class="rounded lengthbg">You've Yeeted: <span id="length"></span></div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="container">
+                <div class="row">
+                  <div class="form-group bg-dark col col-6">
+                    <label for="show-thought">Show Old Yeet:</label>
+                    <form id="show-thought" class="form thoughtShow">
+                      <input type="number" placeholder="Enter Yeet ID" name="thought[id]" min="0" class="rounded form-control" required>
+                      <button type="submit" class="btn btn-block btn-light">Submit</button>
+                    </form>
+                  </div>
+                  <div class="col col-6">
+                    <label for="thought-display">Showing Old Yeet:</label>
+                    <div id="thought-display" class="oldyeet rounded"></div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div id="content" class="content"></div>
+            </div>
+            <div class="modal-footer bg-dark">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col justify-content-start">
+          <p>Made by <a href="https://www.linkedin.com/in/kimberly-wilkes" target="_blank">Kimberly Wilkes <i class="fab fa-linkedin"></i></a> | <a href="https://github.com/kimdolion/void-yeet-client" target="_blank">Github</a>
+          </p>
+        </div>
+        <div class="col text-right align-items-end">
+          <p><a href="https://medium.com/@jensaxena/css-tutorial-animated-geometric-galaxy-background-ad3835c36ce1" target="_blank">Galaxy BG</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
